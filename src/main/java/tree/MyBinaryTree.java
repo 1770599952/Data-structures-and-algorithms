@@ -10,7 +10,7 @@ public class MyBinaryTree {
     /**
      * 节点
      */
-    static class TreeNode {
+    public static class TreeNode {
         Integer data;
         TreeNode leftNode;
         TreeNode rightNode;
@@ -56,6 +56,13 @@ public class MyBinaryTree {
 
         public void setParentNode(TreeNode parentNode) {
             this.parentNode = parentNode;
+        }
+
+        @Override
+        public String toString() {
+            return "TreeNode{" +
+                    "data=" + data +
+                    '}';
         }
     }
 
