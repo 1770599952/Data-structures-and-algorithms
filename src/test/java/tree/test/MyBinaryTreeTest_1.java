@@ -35,7 +35,7 @@ p、q 为不同节点且均存在于给定的二叉搜索树中。
 链接：https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-search-tree
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 */
-public class MyBinaryTreeTest {
+public class MyBinaryTreeTest_1 {
     MyBinaryTree tree = new MyBinaryTree();
 
     @Before
@@ -53,7 +53,9 @@ public class MyBinaryTreeTest {
 
         tree.listTree();
         System.out.println();
-        tree.ldrTree(tree.getRoot());
+        List<MyBinaryTree.TreeNode> result = new ArrayList<MyBinaryTree.TreeNode>();
+        tree.ldrTree(tree.getRoot(),result);
+        System.out.println(result);
     }
 
     @Test

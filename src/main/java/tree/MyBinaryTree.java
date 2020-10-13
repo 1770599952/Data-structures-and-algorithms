@@ -9,6 +9,7 @@ public class MyBinaryTree {
 
     private TreeNode root;
 
+
     /**
      * 节点
      */
@@ -184,20 +185,14 @@ public class MyBinaryTree {
      * <p>
      * 中序遍历的结果是递增有序的
      */
-    public void ldrTree(TreeNode curNode) {
+    public void ldrTree(TreeNode curNode, List<TreeNode> result) {
         if (curNode == null) {
             return;
         }
-        ldrTree(curNode.leftNode);
+        ldrTree(curNode.leftNode, result);
         System.out.println(curNode);
-        ldrTree(curNode.rightNode);
+        result.add(curNode);
+        ldrTree(curNode.rightNode, result);
     }
 
-    private TreeNode getRightTree(TreeNode curNode) {
-        return curNode.rightNode;
-    }
-
-    private TreeNode getLeftTree(TreeNode curNode) {
-        return curNode.leftNode;
-    }
 }
