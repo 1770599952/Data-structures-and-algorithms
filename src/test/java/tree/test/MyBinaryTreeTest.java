@@ -39,6 +39,7 @@ public class MyBinaryTreeTest {
     MyBinaryTree tree = new MyBinaryTree();
 
     @Before
+    @Test
     public void init() {
         tree.add(6);
         tree.add(2);
@@ -51,6 +52,8 @@ public class MyBinaryTreeTest {
         tree.add(5);
 
         tree.listTree();
+        System.out.println();
+        tree.ldrTree(tree.getRoot());
     }
 
     @Test

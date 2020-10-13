@@ -1,5 +1,7 @@
 package tree;
 
+import java.util.List;
+
 /**
  * 二叉查找树
  */
@@ -172,7 +174,30 @@ public class MyBinaryTree {
         return root;
     }
 
-    public void setRoot(TreeNode root) {
-        this.root = root;
+
+    /**
+     * 中序遍历
+     * <p>
+     * 1.先遍历左节点
+     * 2.遍历根节点
+     * 3.遍历右节点
+     * <p>
+     * 中序遍历的结果是递增有序的
+     */
+    public void ldrTree(TreeNode curNode) {
+        if (curNode == null) {
+            return;
+        }
+        ldrTree(curNode.leftNode);
+        System.out.println(curNode);
+        ldrTree(curNode.rightNode);
+    }
+
+    private TreeNode getRightTree(TreeNode curNode) {
+        return curNode.rightNode;
+    }
+
+    private TreeNode getLeftTree(TreeNode curNode) {
+        return curNode.leftNode;
     }
 }
