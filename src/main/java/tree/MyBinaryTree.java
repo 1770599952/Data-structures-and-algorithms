@@ -18,6 +18,7 @@ public class MyBinaryTree {
         TreeNode leftNode;
         TreeNode rightNode;
         TreeNode parentNode;
+        TreeNode nextNode;
 
         public TreeNode(Integer data) {
             this.data = data;
@@ -61,6 +62,14 @@ public class MyBinaryTree {
             this.parentNode = parentNode;
         }
 
+        public TreeNode getNextNode() {
+            return nextNode;
+        }
+
+        public void setNextNode(TreeNode nextNode) {
+            this.nextNode = nextNode;
+        }
+
         @Override
         public String toString() {
             return "TreeNode{" +
@@ -97,7 +106,7 @@ public class MyBinaryTree {
         if (node == null) {
             return;
         }
-        System.out.print(node.data + " ");
+        System.out.print(node.data + " " + node.getNextNode());
         listTreeNode(node.leftNode);
         listTreeNode(node.rightNode);
     }
