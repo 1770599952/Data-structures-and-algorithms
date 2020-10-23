@@ -2,7 +2,7 @@ package list.test;
 
 import list.LinkedList;
 
-public class LinkedListTest {
+public class Learn_3 {
     public static void main(String[] args) {
         LinkedList linkedList1 = new LinkedList();
 

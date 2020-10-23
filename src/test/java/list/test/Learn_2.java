@@ -4,7 +4,7 @@ import list.MyArrayList;
 
 import java.util.Iterator;
 
-public class ArrayListTest {
+public class Learn_2 {
     public static void main(String[] args) {
         MyArrayList<Integer> list = new MyArrayList<Integer>();
         for (int i = 0; i < 20; i++) {
