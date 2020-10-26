@@ -10,7 +10,7 @@ import java.util.List;
  * <p>
  * 示例：
  * <p>
- * 输入：S = "ababcbacadefegdehijhklij"
+ * 输入：S = "ababcbacdefaegdehijhklij"
  * 输出：[9,7,8]
  * 解释：
  * 划分结果为 "ababcbaca", "defegde", "hijhklij"。

@@ -20,14 +20,6 @@ public class LinkedList {
         size++;
     }
 
-    public void insert(Integer data, Node nextNode) {
-
-        if (head == null) {
-            return;
-        }
-
-    }
-
     public Integer remove(Integer i) {
 
         if (head == null) {
@@ -41,6 +33,7 @@ public class LinkedList {
         if (head.data == (int) i) {
             Integer removeData = head.data;
             head = head.next;
+            size--;
             return removeData;
         }
 
@@ -49,6 +42,7 @@ public class LinkedList {
                 // 2.该元素前置节点next元素指向当前元素next节点
                 preNode.next = current.next;
                 current = null;
+                size--;
                 return current.data;
             }
             preNode = current;
@@ -64,6 +58,10 @@ public class LinkedList {
             System.out.print(current.data + " ");
             current = current.next;
         }
+    }
+
+    public int size() {
+        return size;
     }
 
     private static class Node {
