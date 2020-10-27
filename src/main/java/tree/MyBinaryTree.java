@@ -1,5 +1,6 @@
 package tree;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -204,4 +205,23 @@ public class MyBinaryTree {
         ldrTree(curNode.rightNode, result);
     }
 
+    /**
+     * 1.遍历根节点
+     * 2.遍历左节点
+     * 3.遍历右节点
+     **/
+    public List<Integer> preOrderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<Integer>();
+        preOrderTraversalVal(root, result);
+        return result;
+    }
+
+    private void preOrderTraversalVal(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+        result.add(root.data);
+        preOrderTraversalVal(root.leftNode, result);
+        preOrderTraversalVal(root.rightNode, result);
+    }
 }
