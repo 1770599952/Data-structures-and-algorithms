@@ -1,4 +1,4 @@
-package list.test;
+package algorithms;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Stack;
  * 输入: 1->2->2->1
  * 输出: true
  **/
-public class Learn_5 {
+public class Solution_9 {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList();
         list.add(1);

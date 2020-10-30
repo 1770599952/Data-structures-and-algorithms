@@ -10,9 +10,6 @@ public class Learn_4 {
         for (int i = 0; i < 10; i++) {
             list.add(i);
         }
-//        list.remove(0);
-//        list.remove(3);
-//        list.printList();
         Iterator<Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             Integer data = iterator.next();
