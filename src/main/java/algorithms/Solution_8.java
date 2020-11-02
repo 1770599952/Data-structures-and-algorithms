@@ -1,6 +1,6 @@
 package algorithms;
 
-import tree.MyBinaryTree;
+import datastructure.tree.MyBinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +54,7 @@ public class Solution_8 {
 
         List<MyBinaryTree.TreeNode> treeNodes = new ArrayList<MyBinaryTree.TreeNode>();
         treeNodes.add(tree.getRoot());
-        //  tree.listTree();
+        //  datastructure.tree.listTree();
 
         System.out.println(helper(tree.getRoot(), 0));
 
