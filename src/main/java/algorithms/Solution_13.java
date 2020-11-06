@@ -1,7 +1,5 @@
 package algorithms;
 
-import java.util.List;
-
 /**
  * 给出一个无重叠的 ，按照区间起始端点排序的区间列表。
  * <p>
@@ -27,6 +25,7 @@ import java.util.List;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  **/
 public class Solution_13 {
+    // 此题再一次证明了，严密逻辑思维，流程对结果有至关重要的作用
     public static void main(String[] args) {
         int[][] intervals = {{1, 5}};
         int[] newInterval = {0, 6};
@@ -47,14 +46,10 @@ public class Solution_13 {
         for (int i = 0; i < intervals.length; i++) {
             // 1.newInterval 起始位置是否在intervals区间内。
             if (startIndex >= intervals[i][0] && startIndex <= intervals[i][1]) {
-                int curRegionStartIndex = intervals[i][0];
-                int curRegionEndIndex = intervals[i][1];
                 startRegion = i;
             }
             // 2.newInterval 结束位置是否在intervals区间内。
             if (endIndex >= intervals[i][0] && endIndex <= intervals[i][1]) {
-                int curRegionStartIndex = intervals[i][0];
-                int curRegionEndIndex = intervals[i][1];
                 endRegion = i;
             }
         }
@@ -173,8 +168,6 @@ public class Solution_13 {
                 result[j++] = intervals[i];
             }
         }
-        System.out.println(intervals);
-        // 2.
         return result;
     }
 }
