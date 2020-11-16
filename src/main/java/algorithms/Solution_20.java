@@ -30,10 +30,36 @@ public class Solution_20 {
     /**
      * 思路：
      *
+     * 此题的本质是一个数列的排序问题，但是排序，增加了一个额外条件，增提升了复杂性。
+     *
+     * H规则：
+     * 我们按降序排序次数列，数字大的在左侧。
+     * 如果数字相同，K大的在后面。
+     * 因为K代表 大于等于本数字的在前方的数量，因此两个相同的数字，在后面的那个K肯定大。因此，K大的在后方。
+     *
+     * K规则：
+     * 接下来，我们从左侧最大值开始进行额外条件的排序，
+     * K等于几，就插入到下标为几的数列处。
+     * 因为，比当前数字大的数字已经排好序，因此，我们只需为当前数字找到，第K个大于它的数字，然后放到第K个数字即可。
+     * 并不会影响，比它大的数字的排序。
      *
      *
+     * 排序完：
+     * [[7,0], [7,1], [6,1], [5,0], [5,2]，[4,4]]
+     * 插入的过程：
+     * 插入[7,0]：[[7,0]]
+     * 插入[7,1]：[[7,0],[7,1]]
+     * 插入[6,1]：[[7,0],[6,1],[7,1]]
+     * 插入[5,0]：[[5,0],[7,0],[6,1],[7,1]]
+     * 插入[5,2]：[[5,0],[7,0],[5,2],[6,1],[7,1]]
+     * 插入[4,4]：[[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
      *
+     * 作者：carlsun-2
+     * 链接：https://leetcode-cn.com/problems/queue-reconstruction-by-height/solution/406du-shuo-shi-tan-xin-na-yao-wei-shi-yao-yong-tan/
+     * 来源：力扣（LeetCode）
+     * 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
      *
+     * https://leetcode-cn.com/problems/queue-reconstruction-by-height/solution/406du-shuo-shi-tan-xin-na-yao-wei-shi-yao-yong-tan/
      * **/
     public static int[][] reconstructQueue(int[][] people) {
         int[][] result = new int[people.length][2];
